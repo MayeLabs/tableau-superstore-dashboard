@@ -1230,6 +1230,26 @@
       </table>
       <simple-id uuid='{A4278CCA-71DA-4458-AC2A-44F7302167D5}' />
     </worksheet>
+    <worksheet name='Hoja 13'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{DE8A155D-1423-4D7E-BE00-3CF4BCB9E95B}' />
+    </worksheet>
     <worksheet name='Mapa de calor'>
       <table>
         <view>
@@ -1341,6 +1361,62 @@
       </table>
       <simple-id uuid='{3053B681-3228-417C-B7B7-3E259389C32A}' />
     </worksheet>
+    <worksheet name='PorcentajeVentas-Categ-Subcateg-Treemap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Porcentaje de ventas por categoria y subcategorias</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Varias conexiones)' name='federated.1qm2lth0btp8sd13ifd3d1ic7hrb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qm2lth0btp8sd13ifd3d1ic7hrb'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sub-Category]' role='dimension' type='nominal' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sub-Category]' derivation='None' name='[none:Sub-Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[sum:Sales:qk]' />
+              <color column='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[sum:Sales:qk]' />
+              <lod column='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[none:Sub-Category:nk]' />
+              <text column='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[none:Category:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2557C2D8-560A-4165-B52F-12F0C4698E20}' />
+    </worksheet>
     <worksheet name='PorcentajeVentas-PieChart'>
       <layout-options>
         <title>
@@ -1388,7 +1464,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run>Porcentaje de ventas</run>
+            <run>Porcentaje de ventas por categoria</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -1979,7 +2055,7 @@
       </viewpoint>
       <simple-id uuid='{3174324F-37D8-4C16-BCB4-02F11A692749}' />
     </window>
-    <window class='worksheet' maximized='true' name='PorcentajeVentas-Treemap'>
+    <window class='worksheet' name='PorcentajeVentas-Treemap'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2014,6 +2090,65 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{C2AC2A9B-B734-496B-9725-2A63E8452375}' />
+    </window>
+    <window class='worksheet' maximized='true' name='PorcentajeVentas-Categ-Subcateg-Treemap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='174'>
+            <card pane-specification-id='0' param='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[sum:Sales:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[none:Category:nk]</field>
+            <field>[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[none:Sub-Category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{3209FB41-8276-4989-9C27-059F292435C5}' />
+    </window>
+    <window class='worksheet' name='Hoja 13'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{426C55EF-4881-4B3C-9CED-9F4E8C65289D}' />
     </window>
   </windows>
   <thumbnails>
@@ -2223,6 +2358,20 @@
       JABCaRIAoTQJgFCaBEAoTQIglCYBEEqTAAilSQCE0iQAQmkSAKE0CYBQmgRAKE0CIJQmARBK
       kwAIpUkAhNIkAEJpEgChNAmAUJoEQChNAiCUJgEQSpMACKVJAITSJABCaRIAoTQJgFCaBEAo
       TQIglCYBEEqTAAilSQCE0v4fLAurHDmIh+YAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Hoja 13' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
     </thumbnail>
     <thumbnail height='192' name='Mapa de calor' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
@@ -2576,6 +2725,64 @@
       AAilSQCE0iQAQmkSAKE0CYBQmgRAKE0CIJQmARBKkwAIpUkAhNIkAEJpEgChNAmAUJoEQChN
       AiCUJgEQSpMACKVJAITSJABCaRIAoTQJgFCaBEAoTQIglCYBEEqTAAilSQCE0iQAQmkSAKE0
       CYBQmgRAKE0CIJQmARBK+39f6jnN7AJzUwAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='PorcentajeVentas-Categ-Subcateg-Treemap' width='192'>
+      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
+      /wcVzRhNcRV7fwAAAABJRU5ErkJggg==
     </thumbnail>
     <thumbnail height='164' name='PorcentajeVentas-PieChart' width='164'>
       iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAYAAAAZtYVBAAAACXBIWXMAABJ0AAASdAHeZh94
