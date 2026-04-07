@@ -1384,6 +1384,62 @@
       </table>
       <simple-id uuid='{5774EDA1-BC44-49BA-9197-52E884A29DE4}' />
     </worksheet>
+    <worksheet name='PorcentajeVentas-Treemap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Porcentaje de ventas</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Varias conexiones)' name='federated.1qm2lth0btp8sd13ifd3d1ic7hrb' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qm2lth0btp8sd13ifd3d1ic7hrb'>
+            <column datatype='string' name='[Category]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Sum' name='[pcto:sum:Sales:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Table' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[pcto:sum:Sales:qk:2]' />
+              <color column='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[pcto:sum:Sales:qk:2]' />
+              <text column='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[none:Category:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <percentages enabled='true' mode='table' />
+      </table>
+      <simple-id uuid='{11DF873E-DDF3-4495-A0E4-CA63C5AB0402}' />
+    </worksheet>
     <worksheet name='Rentabilidad por Categ. y SubCateg.'>
       <table>
         <view>
@@ -1887,7 +1943,7 @@
       </viewpoint>
       <simple-id uuid='{9D75AE39-3B31-4EA5-9489-94F543C64A99}' />
     </window>
-    <window class='worksheet' maximized='true' name='PorcentajeVentas-PieChart'>
+    <window class='worksheet' name='PorcentajeVentas-PieChart'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1922,6 +1978,42 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{3174324F-37D8-4C16-BCB4-02F11A692749}' />
+    </window>
+    <window class='worksheet' maximized='true' name='PorcentajeVentas-Treemap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='174'>
+            <card pane-specification-id='0' param='[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[pcto:sum:Sales:qk:2]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[none:Category:nk]</field>
+            <field>[federated.1qm2lth0btp8sd13ifd3d1ic7hrb].[pcto:sum:Sales:qk:2]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C2AC2A9B-B734-496B-9725-2A63E8452375}' />
     </window>
   </windows>
   <thumbnails>
@@ -2524,6 +2616,34 @@
       SBKFQZIoDJJEYZAkCoMkURgkicIgSRQGSaIwSBKFQZIoDJJEYZAkCoMkURgkicIgSRQGSaIw
       SBKFQZIoDJJEYZAkCoMkURgkicIgSRQGSaIwSBKFQZIoDJJEYZAkyn/h7ahHEaoG/QAAAABJ
       RU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='PorcentajeVentas-Treemap' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAFEklEQVR4nO3aX09TdxzH8U//grS2QvijAgWnWNRtcWPJ9IbsGczbPZg9l116Px+ByUKm
+      2ZIpbkhUBIS1QFcopdBzimcX2xKINHMLtCaf9+vu9PTP95f0nXN6TmNRFEUCTMW7PQDQTQQA
+      a8mjG/vNUEvrlW7NAnTcsQBevtnUN99+16VRgM7jFAjWCADWTgwgnUroq8+ndG/2U53v631n
+      /9XRwfZvGIupODF8ehMCZyh50oNBeKifFlZ0dXRQ2XNpzUyPa31rR6NDF1Sq1FQsDGtqfEi/
+      LpV088pF1RoH2m+GGsxn9fTFugbzWY3czqknndTCcknFwoiCsKXdRlMb1boOglCVnb1OrxV4
+      x7+eAt2YvKh4PKZzPSnt1BtaWC5pdaOq58sbymV69cuLNTWDlrLnevTjs9e6PJRTKplQM2zp
+      1dqWbl25pLmnS4okRYp05fKA/qjx5ceHoW0AQXiocnVXPz9f1eHbSJvVuqJIuj4+rFKlpu36
+      vja366o3mipValotb+v29TE9X97Q0npFjWagof6sHv+2ojufTCqX6dXiyqZSiYS494wPRezo
+      XyHmX66f+mXQTG/67zDK6s/1aaVUVTNsnepnAP/Xib8BTtPeQaAfnrySJG1x3o8PDJdBYY0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0A
+      YI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYI0AYC0WRVH0
+      z0Z5u677c0+6OQ/QUcljW6m4NNzXpVGAzuMUCNYIANbaBvDowfdamJtTKwjavrhR21Gz0VD5
+      9dKZDAectWS7HWGzqVg8psXHj/TR7c+0PD+vytqqCrc+1sr8vBKplIYKBfVkMnr28KGm795V
+      Kt2jaul3hUGgvlxOu5WKquWy7nx9T5l8vpPrAt5L2yPAhZERFb+8o3gioeBgX60w0PDEpC5d
+      vaZLU1ManpxUFEU6PzCg8ekbyvYPqBWGOtjbUyaf17WZL9So1TQ1M6NkKtXJNQHvre0RYKw4
+      LUkq3LyptcVFjV0vKpFKKh6Pa6gw8deTorfqzWSVHehXMp3Wfn1Xo8WiMvm8YrGYbs3OauvN
+      GyXT6Y4sBvivjt8H2Gvo/sJiN+cBOoqrQLBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBG
+      ALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALBGALCWPLqRTsQ1mct1
+      axag4/4Eyj4Ng/KPW6gAAAAASUVORK5CYII=
     </thumbnail>
     <thumbnail height='192' name='Rentabilidad por Categ. y SubCateg.' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
