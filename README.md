@@ -1,2 +1,72 @@
 # tableau-superstore-dashboard
 Interactive Tableau dashboard analyzing sales and profit  from the Sample Superstore dataset, covering context  filters, date parameters and multi-sheet visualizations.
+
+## Description / Descripción
+
+EN
+
+Practice projects build with tableu Desktop using the sample superstore dataset. Include interactive filters, context filters, dat range sliders, parameter controls, ande multi-sheet dashboards analyzing sales and profit across regions, categories and customer segments.
+
+ES
+
+Proyecto de práctica desarrollado con Tableau Desktop 
+usando el dataset Sample Superstore. Incluye filtros 
+interactivos, filtros de contexto, sliders de rango 
+de fechas, controles de parámetros y dashboards 
+multi-hoja para analizar ventas y beneficios por 
+región, categoría y segmento.
+
+## Session 1 - Sales Dashboard
+
+EN / ES
+
+- Sales disaggregated by region and category / Ventas desagregadas por región y categoría
+- Profit by region with target line / Beneficio por región con línea de target / 
+- Sales by subcategories highlighting Binders / Ventas por subcategorías resaltando Binders 
+- Average monthly sales - Seasonality analysis/ Promedio de ventas por meses - Análisis de estacionalidad 
+- Profit by category and region / Beneficio por categoría y región
+- Profitability by category and subcategory /Rentabilidad por categoría y subcategoría
+- Sales percentage by category and segment / Porcentaje de ventas por categoría y segmento
+-  Sales evolution with trend / Evolución de ventas con tendencia
+-  Annual Sales and Cost Comparison / Comparativa de Ventas y Costo anual
+- Totals and subtotals table / Tabla de totales y subtotales
+
+### Exercise 1 / Ejercicio 1
+---
+
+EN
+- Build a customer sales dashboard
+
+As a user, I want to be able to choose one or all customers when visualizing the dashboard, and observe the charts and insights of the selected customer.
+
+The dashboard must include:
+* Filters: Customers and Years
+* Insights: #Total Sales and #Profit Percentage
+* Charts:
+    - Sales Evolution - The year filter must not affect this chart
+    - Sales disaggregated by category and subcategories
+    - Profit by segment
+* Table: Top 5 best-selling products for the selected 
+customer or all customers
+
+
+ES
+- Realizar un dashboard de ventas por cliente
+
+Yo como usuario, quiero que al visualizar el dashboard, pueda elegir uno o todos los clientes y observar las gráficas e insights del cliente seleccionado.
+
+El dashboard debe tener:
+* Filtros: Clientes y Años
+* Insigts: #Total de ventas y  #Rentabilidad en porcentaje
+* Gráficos:
+    - Evolución de ventas - El frilto de año no debe afectar dicho gráfico
+    - Ventas desagregadas por categoría y subcategorías
+    - Beneficios por segmentos
+* Tabla: Top 5 productos más vendidos al cliente 
+seleccionado o de todos los clientes
+
+### Exercise 1 - Resolution / Resolución
+* Dashboard: Ventas por cliente
+* File: `SuperStore_ventasXcliente.twb`
+
+![Customer Sales Dashboard](img/Dashboard_ventasXclientes.png)
