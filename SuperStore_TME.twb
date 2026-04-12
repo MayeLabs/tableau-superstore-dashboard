@@ -534,6 +534,12 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
+      <column caption='TE' datatype='integer' name='[Calculation_434034473126465536]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Ship Date]-[Order Date]' />
+      </column>
+      <column caption='TME' datatype='real' name='[Calculation_434034473126555649]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([Ship Date]-[Order Date])' />
+      </column>
       <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
       <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
