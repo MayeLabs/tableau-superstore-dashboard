@@ -101,6 +101,26 @@ EN / ES
 
 ### Exercise 2 / Ejercicio 2
 ---
+EN
+
+Analyze the Average Shipping Time
+
+* We will work up to 12/31/2017
+* Calculated field: average of (ship date – order date)
+* Average Shipping Time for the last month
+* Average Shipping Time for the entire global period
+* Monthly evolution of the Average Shipping Time over the entire period, with an average line
+* Average Shipping Time by day of the week
+* Bar chart of Average Shipping Time by shipping mode with a 3-day reference line
+* Bar chart of Average Shipping Time by segment, with Corporate highlighted in a different color
+* Bar chart of Average Shipping Time by category, with a popup showing subcategory details
+* Map of Average Shipping Time by state. Red-green diverging color scale, centered at 3.95
+* Top 10 products table with the best Average Shipping Time
+* Dashboard with
+    - General date filter applied to everything except current Average Shipping Time
+    - Shipping mode filter applied to everything except global Average Shipping Time
+
+ES
 
 Analizar el tiempo medio de entrega (TME)
 
@@ -118,3 +138,6 @@ Analizar el tiempo medio de entrega (TME)
 * Dashboard con
     - Filtro de fecha general que aplique a todo menos a TME actual
     - Filtro de modo de envío que afecte a todo menos a TME global
+
+![Customer Sales Dashboard](img/DashboardTME_SinEstilo.png)
+
