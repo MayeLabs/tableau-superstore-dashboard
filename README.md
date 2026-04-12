@@ -70,3 +70,24 @@ seleccionado o de todos los clientes
 * File: `SuperStore_ventasXcliente.twb`
 
 ![Customer Sales Dashboard](img/Dashboard_ventasXclientes.png)
+
+
+
+## Session 2 - Sales Dashboard / Dashboard de Ventas
+
+### Part I / Parte I
+
+EN / ES
+
+* Sales, discount and profit by category and subcategory / Ventas, descuento y beneficio por categoría y subcategoría
+* Grand totals and subtotals / Totales generales y subtotales
+* Sales by region and category / Ventas por región y categoría
+* Sales by state map / Mapa de ventas por estados
+* Sales by state + Tooltip (chart + table) / Ventas por estados + Descripción emergente (gráfico + tabla)
+* Sales disaggregated by ship mode / Ventas desagregadas por ship mode
+* Dashboard: Sales - Mosaic / Dashboard: Ventas - Mosaico
+* Dashboard: Sales - Floating / Dashboard: Ventas - Flotante
+* Stories in Tableau / Historias en Tableau
+
+![Dashboard Mosaic](img/SuperStore_MapasTablas/DashboardMosaic.png)
+![Dashboard Floating](img/SuperStore_MapasTablas/DashboardFloating.png)
