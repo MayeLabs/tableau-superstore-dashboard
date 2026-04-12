@@ -1041,6 +1041,55 @@
     </datasource>
   </datasources>
   <worksheets>
+    <worksheet name='TME del total del periodo global'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>TME Global</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Orders+ (Varias conexiones)' name='federated.0wvmhm412nokxu17k9wyy1x7nk7f' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0wvmhm412nokxu17k9wyy1x7nk7f'>
+            <column caption='TME' datatype='real' name='[Calculation_434034473126555649]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([Ship Date]-[Order Date])' />
+            </column>
+            <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
+            <column datatype='date' name='[Ship Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_434034473126555649]' derivation='User' name='[usr:Calculation_434034473126555649:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0wvmhm412nokxu17k9wyy1x7nk7f].[usr:Calculation_434034473126555649:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0wvmhm412nokxu17k9wyy1x7nk7f].[usr:Calculation_434034473126555649:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B6751B82-7BC5-4B0E-A1FF-5FCC1271324C}' />
+    </worksheet>
     <worksheet name='TME del último mes'>
       <table>
         <view>
@@ -1090,7 +1139,7 @@
     </worksheet>
   </worksheets>
   <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' maximized='true' name='TME del último mes'>
+    <window class='worksheet' name='TME del último mes'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1120,8 +1169,49 @@
       </viewpoint>
       <simple-id uuid='{C26DD615-83F2-4323-8EC3-AA948A381636}' />
     </window>
+    <window class='worksheet' maximized='true' name='TME del total del periodo global'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E1414FFF-33A9-444F-A410-D1357EB6CAE5}' />
+    </window>
   </windows>
   <thumbnails>
+    <thumbnail height='25' name='TME del total del periodo global' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAZCAYAAACB6CjhAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAADBElEQVRYhe2Vv0sjQRTHvxcbiUsQbaKFYpU/IOy6USvRKs36owtiZ8RGECvBImIs7FXW
+      gGynlWIh2qhooSCxEBeFYLFEU6yQyBp2yCIz74qDHOEid3AeG7h8un3v+2a+82WH+UZEhP+Y
+      gN8G/KYZgN8G/KYZgN8G/KYZgN8G/KYZgN8G/KYZgN8G/KYZgN8G/KYhAmCMIZPJIB6PQ1EU
+      KIqCq6srCCE+nalUKshkMhgeHoaiKJicnMTd3d0vunK5jLW1NQwODlZ12Wz2p4AaANM0aX19
+      nSzLIs45cc5pbGyMstlsXT3nnNLpNC0uLlKpVCLOOR0fH1M8Hqf7+/uqznEcmp2dpc3NTXJd
+      lzjn9PDwQJeXl1VNQwRQj42NDdJ1vW4vl8vRzMwMFYvFmrqu65RKpYhzTkREh4eHlE6nq9/1
+      aIgrUA/LshCJROr23t/f0d3djY6Ojpq6qqrI5/Mol8vwPA/n5+cYGRlBIPD5MRsuAM/zcHt7
+      i56eHsRisbqa1tZWFItFuK5bUw+HwxBCwPM8uK4Lxhienp4wNTWF/v5+xGIxLCws4PX19efQ
+      1/20XwPnnCzLokQiQc/Pz5/q3t7eaHl5mVRVJVmWSdM02traokQiQbZtk23bND09TYVCoWbO
+      cRxKJpNkmiYRNeAVCAQC6O3thaZpMAzjU117eztWVlZwfX2Nm5sbHBwcYGBgAJ2dnZAkCZIk
+      oa2tDS8vLzVzoVAI4XAYlUrlx37/8jB/gyRJKJVK4Jz/kV4IgdPTU0SjUQSDQQSDQUQiEZyc
+      nNQ8p47jwLZthEIhAA0SwO7uLra3t2HbNoQQEELAMAwMDQ2hpaWl7sz+/j4eHx8hhABjDLqu
+      I5fLQdO0qmZ8fBymacIwDHx8fIAxhp2dHXR1daGvr++H6J9e6D+kUChQKpWi0dFRikajJMsy
+      HR0dVZ8vxhglk0na29urzpydndHExATJskyqqtLS0hLZtv3L2vl8nubm5khRFFJVlVZXV8l1
+      3Wq/IQL4HRcXFzQ/P0+MsS9f+zsi0lpfoIB+yAAAAABJRU5ErkJggg==
+    </thumbnail>
     <thumbnail height='25' name='TME del último mes' width='64'>
       iVBORw0KGgoAAAANSUhEUgAAAEAAAAAZCAYAAACB6CjhAAAACXBIWXMAABJ0AAASdAHeZh94
       AAACUElEQVRYhe2VMWvqUBiGn3soOCRT6eTQXyBOwbUIFlyVQnGSgnTpULopdHKoDiJC12rJ
