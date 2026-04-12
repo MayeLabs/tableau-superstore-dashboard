@@ -97,3 +97,25 @@ EN / ES
 
 #### Dashboard design / El diseño del dashboard
 > 📖 My notes / Mis notas : [Dashboard Design Guide](DASHBOARD_DESIGN.md)
+
+
+### Exercise 2 / Ejercicio 2
+---
+
+Analizar el tiempo medio de entrega (TME)
+
+· Vamos a trabajar hasta el 31/12/2017
+· Campo calculado: media de (fecha de entrega – fecha de pedido)
+
+· TME del último mes
+· TME del total del periodo global
+· Evolución mensual del TME en todo el periodo, con línea de promedio
+· TME por día de la semana
+· Gráfico de barras TME por modo de envío con una línea de referencia de 3 días
+· Grafico de barras TME por segmento, con Corporate de color distinto.
+· Gráfico de barras TME por categoría, con ventana emergente con detalle de las subcategorías
+· Mapa del TME entrega por estados. Color divergente rojo-verde, con el centro en 3,95
+· Tabla de productos TOP 10 con los mejores TME
+· Dashboard con
+o   Filtro de fecha general que aplique a todo menos a TME actual
+o   Filtro de modo de envío que afecte a todo menos a TME global
