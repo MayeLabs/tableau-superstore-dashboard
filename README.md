@@ -91,3 +91,38 @@ EN / ES
 
 ![Dashboard Mosaic](img/SuperStore_MapasTablas/DashboardMosaic.png)
 ![Dashboard Floating](img/SuperStore_MapasTablas/DashboardFloating.png)
+
+
+### Part II / Parte II
+
+#### Dashboard design / El diseño del dashboard 
+EN
+
+1. What is the objective ?
+2. Who is it aimed at? Depending on the answer it will have more or less detail.
+3. What are the best char to choose based on the objective ?
+4. Priorize simplification, hierarchy and aligment.
+
+Remember that dashboards are as much about the data as 
+they are about the charts, so take into account:
+- Comparability or context.
+- Temporality.
+- Filters.
+
+For excellent results, pay attention to composition, 
+typography and colors.
+
+ES
+
+1. ¿Cuál es el objetivo?
+2. ¿Para quién está dirigido? Según la respuesta tendrá más o menos detalles
+3. ¿Cuáles son los mejores gráficos a elegir según el objetivo?
+4. Dar prioridad a la simplicidad, jerarquización y alineación.
+
+Recordar que el o los dashboards tienen tanto que ver con los datos 
+como con los gráficos, para ello tomar en cuenta:
+- La comparabilidad o contextualidad.
+- La temporalidad.
+- Los filtros.
+
+Para excelentes resultados, fijarse en la composición, tipografía y colores.
