@@ -141,3 +141,5 @@ Analizar el tiempo medio de entrega (TME)
 
 ![Customer Sales Dashboard](img/DashboardTME_SinEstilo.png)
 
+![Customer Sales Dashboard Style](img/DashboardTME_style.png)
+
